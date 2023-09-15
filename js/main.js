@@ -50,6 +50,7 @@ document.querySelector(".burger").addEventListener("click", function() {
 })
 document.querySelector(".header__nav-close").addEventListener("click", function() {
   document.querySelector(".header__nav").classList.remove("active");
+  document.querySelector(".header__nav-close").classList.remove("active")
   const body = document.querySelector('body')
   body.classList.remove("unscroll");
 })
@@ -66,45 +67,7 @@ links.forEach((link) => {
   link.addEventListener('click', handleClick);
 });
 
-// linkis.addEventListener("click", function() {
-//   document.querySelector(".header__nav").classList.remove("active");
-//   document.querySelector(".header__nav-close").classList.remove("active");
-// })
 
-// const swiperPractice = new Swiper('.practice__swiper', {
-//   loop: true,
-//   navigation: {
-//       nextEl: '.practice__swiper-button-next',
-//       prevEl: '.practice__swiper-button-prev',
-//   },
-//   pagination: {
-//       el: '.practice__swiper-pagination',
-//       clickable: true
-//   },
-  // breakpoints: {
-  //   300: {
-  //     slidesPerView: 1,
-  //     spaceBetween: 38,
-  //     slidesPerGroup: 1,
-  // },
-  //   700: {
-  //     slidesPerView: 2,
-  //     spaceBetween: 38,
-  //     slidesPerGroup: 2,
-  // },
-
-  //     1000: {
-  //         slidesPerView: 3,
-  //         spaceBetween: 27,
-  //         slidesPerGroup: 3,
-  //     },
-  //     1761: {
-  //         slidesPerView: 3,
-  //         spaceBetween: 50,
-  //         slidesPerGroup: 3,
-  //     },
-  // }
-// });
 
 //Map
 
@@ -139,17 +102,3 @@ const myPlacemark = new ymaps.Placemark(
 myMap.geoObjects.add(myPlacemark);
 myMap.container.fitToViewport();
 }
-
-// const container = document.querySelector(".container")
-// const swiperHero = new Swiper('.hero__swiper-container', {
-//   slidesPerView: 1,
-//   spaceBetween: 10,
-//   // // autoplay: {
-//   // //   delay: 3000
-//   // },
-
-//   pagination: {
-//     el: '.swiper-pagination',
-//     clickable: true
-//   },
-// })
